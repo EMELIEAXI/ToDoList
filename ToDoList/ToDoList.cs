@@ -4,15 +4,14 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace ToDoList
 {
     //<summary>
     //Hanterar logiken för att lägga till, ta bort och 
     //</summary>
 
-    class IthemInList
-    {
+    //class IthemInList
+    //{
     //    public string Ithem { get; set; }
     //    public bool IsChecked { get; set; }
 
@@ -27,7 +26,7 @@ namespace ToDoList
     //        IsChecked = true;
 
     //    }
-        public class ToDoList
+        public class ToDoListList
         {
             private List<string> tasks = new List<string>();
 
@@ -50,5 +49,5 @@ namespace ToDoList
                 return tasks;
             }
         }
-    }
 }
+
