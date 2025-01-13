@@ -4,43 +4,25 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
+using System.Windows.Controls;
+using System.Windows;
 namespace ToDoList
 {
-    //<summary>
-    //Hanterar logiken för att lägga till, ta bort och 
-    //</summary>
+    public class TasksToDo
+    { 
+            public List<string> tasks = new List<string>();
 
-    //class IthemInList
-    //{
-    //    public string Ithem { get; set; }
-    //    public bool IsChecked { get; set; }
-
-    //    public IthemInList(string ithem, bool isChecked)
-    //    {
-    //        Ithem = ithem;
-    //        IsChecked = isChecked;
-    //    }
-
-    //Public void CheckAsDone()
-    //    {
-    //        IsChecked = true;
-
-    //    }
-        public class ToDoListList
-        {
-            private List<string> tasks = new List<string>();
-
-            public void AddTask(string task)
+            public void AddTask(string NyTask)
             {
-                tasks.Add(task);
-
+                tasks.Add(NyTask);
             }
 
             public void RemoveTask(int index)
             {
                 if (index >= 0 && index < tasks.Count)
                 {
-                    tasks.RemoveAt(index);
+                 tasks.RemoveAt(index);
                 }
             }
 
@@ -48,6 +30,5 @@ namespace ToDoList
             {
                 return tasks;
             }
-        }
+    }
 }
-

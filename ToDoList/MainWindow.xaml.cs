@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,20 +17,19 @@ namespace ToDoList
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ToDoListList _toDoList;
-
+        private TasksToDo _toDoList;
         public MainWindow()
         {
             InitializeComponent();
-            _toDoList = new ToDoListList();
+            _toDoList = new TasksToDo();
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            string task = TaskTextBox.Text;
-            if (!string.IsNullOrEmpty(task))
+            string NyTask = TaskTextBox.Text;
+            if (!string.IsNullOrEmpty(NyTask))
             {
-                _toDoList.AddTask(task);
+                _toDoList.AddTask(NyTask);
                 UpdateTaskList();
                 TaskTextBox.Clear();
             }
@@ -38,9 +38,9 @@ namespace ToDoList
         private void UpdateTaskList()
         {
             TasksListBox.Items.Clear();
-            foreach (var task in _toDoList.GetAllTask())
+            foreach (var NyTask in _toDoList.GetAllTask())
             {
-                TasksListBox.Items.Add(task);
+                TasksListBox.Items.Add(NyTask);
             }
         }
 

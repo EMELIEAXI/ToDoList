@@ -3,11 +3,11 @@ namespace TestingToDoList
 {
     public class ToDoListTests
     {
-        private ToDoListList _todoList;
+        private TasksToDo _todoList;
 
         public ToDoListTests()
         {
-            _todoList = new ToDoListList();
+            _todoList = new TasksToDo();
         }
         [Fact]
         public void AddTask_ShouldAddTaskToList()
