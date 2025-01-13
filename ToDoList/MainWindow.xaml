@@ -15,9 +15,7 @@
         <Button Name="AddButton" Content="Lägg till uppgift" Background="LemonChiffon" HorizontalAlignment="Center" VerticalAlignment="Top" Width="146" Height="30" Margin="0,77,0,0" Click="AddButton_Click"/>
 
         <ListBox Name="TasksListBox" HorizontalAlignment="Center" Height="365" Margin="0,132,0,0" Width="355" VerticalAlignment="Top"/>
-
         <Button Name="RemoveButton" Content="Ta bort uppgift" Background="Coral" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Width="146" Height="30" Margin="214,502,0,0" Click="RemoveButton_Click"/>
-        
     </Grid>
 </Window>
 
